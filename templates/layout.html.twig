@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="pl" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title '' %}</title>
+    <link href="{{ asset('css/foundation.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css"/>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-44961596-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="row">
+            <div class="columns large-6 medium-6 small-7">
+                <a href="{{ url('homepage') }}">MBOHDZIUL.COM</a>
+            </div>
+            <div class="columns large-3 medium-3 small-2">
+                <a href="{{ url('cv') }}">cv</a>
+            </div>
+            <div class="columns large-3 medium-3 small-3">
+                <a href="{{ url('about') }}">about</a>
+            </div>
+        </div>
+    </nav>
+    <div id="content" class="row">
+        <div class="columns large-12">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="columns large-12">
+                <ul>
+                    <li><a href="https://github.com/mbohdziul" title="github"><i class="icon-git-squared"></i></a></li>
+                    <li>
+                        <a href="https://www.flickr.com/photos/mbohdziul/" title="filckr"><i class="icon-flickr"></i></a>
+                    </li>
+                    <li><a class="mail_link" href="mailto:m@mbohdziul.com">&copy; by Marcin
+                                                                           Bohdziul {{ 'now'|date('Y') }}</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/mbohdziul/" title="linkedin"><i class="icon-linkedin-squared"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/marcin.bohdziul" title="facebook"><i class="icon-facebook-squared"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ asset('js/vendor/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/what-input.js') }}"></script>
+    <script src="{{ asset('js/vendor/foundation.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script src="{{ asset('js/vendor/jquery.lazyload.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+</body>
+</html>
