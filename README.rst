@@ -1,9 +1,9 @@
 Personal website
 ==================
 
-The main idea behind this site, was to create personal website using photos that I already uploaded to flickr.
+The main goal of this little project was to create a personal website using photos uploaded to flickr.
 
-It should be fast, easy to maintain and provide simple way to synchronize with flickr.
+It should be fast, easy to use and provide a simple way to sync with flickr.
 
 
 Setting up site
