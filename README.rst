@@ -67,7 +67,7 @@ What's inside?
 
 - `SilexSkeleton`_ as base
 - `Guzzle`_ used for communication with flick api
-- `Cache`_ for caching
+- `DoctrineCache`_ for caching
 
 .. _Composer: http://getcomposer.org/
 .. _SilexSkeleton: https://github.com/silexphp/Silex-Skeleton
