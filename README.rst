@@ -14,7 +14,9 @@ Setting up site
 - create new database (mysql), and run code from dbase.sql file in it
 
 - install dependencies with  `Composer`_
+
 .. code-block:: console
+
     composer install
 
 - create two config files, one from /config/prod-dist.pl -> prod.php, and second  /src/app-dist.php -> app.php
