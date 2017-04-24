@@ -132,6 +132,14 @@ ul.tabs {
     background-position: 500px 30px;
 }
 
+#fork {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 0;
+    z-index: 1
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -176,6 +184,10 @@ footer li {
     footer li {
         padding: 0;
         font-size: 0.8rem;
+    }
+
+    #fork {
+        display: none;
     }
 
 }
