@@ -6,6 +6,10 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\HttpFoundation\Request;
 
+ini_set('xdebug.max_nesting_level', 9999);
+ini_set("memory_limit", "-1");
+set_time_limit(0);
+
 $console = new Application('mb, personal website', 'n/a');
 $console->getDefinition()->addOption(new InputOption('--env', '-e', InputOption::VALUE_REQUIRED, 'The Environment name.', 'dev'));
 $console->setDispatcher($app['dispatcher']);
@@ -44,9 +48,7 @@ $console->register('flickr:fetch')
 
                 // fetch all photos from each set
                 $photosInOneSet = flickrRestRequest($app, 'flickr.photosets.getPhotos', [
-                    'photoset_id' => $set['id'],
-//                    'page' => '1',
-//                    'per_page' => '5'
+                    'photoset_id' => $set['id']
                 ])['photoset'];
 
                 // get details of each photo
@@ -66,7 +68,7 @@ $console->register('flickr:fetch')
                         'photo_width' => $photoDetails['size'][$photoSize]['width'],
                         'photo_height' => $photoDetails['size'][$photoSize]['height'],
                         'title' => $photo['title'],
-                        'description' => $photo['description']
+                        'description' => !empty($photo['description']) ? $photo['description'] : ""
                     ));
                     $output->write('.');
                 }
